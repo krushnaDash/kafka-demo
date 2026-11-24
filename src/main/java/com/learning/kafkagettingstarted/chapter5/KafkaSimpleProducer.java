@@ -34,12 +34,12 @@ public class KafkaSimpleProducer {
 
             int startKey = (new Random()).nextInt(1000) ;
 
-            for( int i=startKey; i < startKey + 10; i++) {
+            for( int i=startKey; i < startKey + 10000; i++) {
 
                 //Create a producer Record
                 ProducerRecord<String,String> kafkaRecord =
                         new ProducerRecord<String,String>(
-                                "kafka.learning.orders",    //Topic name
+                                "wm-cth-salesstreams",    //Topic name
                                 String.valueOf(i),          //Key for the message
                                 "This is order" + i         //Message Content
                         );

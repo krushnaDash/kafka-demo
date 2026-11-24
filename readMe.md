@@ -21,6 +21,8 @@ docker exec -it kafka-broker /bin/bash
 	--partion 1 \
 	--replication-factor 1
 
+
+cd /opt/bitnami/kafka/bin
 	
 	./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic kfaka.demo
 	./kafka-console-producer.sh  --topic kafka.demo --bootstrap-server localhost:9092
